@@ -21,25 +21,26 @@
 
 //  *** This is going to be a WHILE inside of a WHILE ***
 
-        // function factors(x) {
-        //     var primeFactor = [];
-        //     for (var i = 0; i < x; i++) {
-        //         if (x % i === 0 && isPrime(i) === true) {
-        //             primeFactor = i;
-        //         }
-        //     }
-        //     console.log(primeFactor);
-        // }
+        function factors(x) {
+            var primeFactor = [];
+            for (var i = 0; i < x; i++) {
+                if (x % i === 0 && isPrime(i) === true) {
+                    primeFactor = i;
+                }
+            }
+            console.log(primeFactor);
+        }
 
-        // function isPrime(x) {
-        //     for (var i = 2; i < x; i++) {
-        //         if (x % i === 0) {
-        //             return false;
-        //         }
-        //     }
-        //     return true;
-        // }
-        // factors(600851475143);
+        function isPrime(x) {
+            for (var i = 2; i < x; i++) {
+                if (x % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        factors(13195);
+        factors(600851475143);
     </script>
 </body>
 </html>

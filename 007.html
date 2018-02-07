@@ -8,11 +8,6 @@
 </head>
 <body>
     <script>
-        
-        ////////////////
-        /// NOT DONE ///
-        ////////////////
-
         // Problem 7: 10001st prime
 
         // By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we
@@ -32,7 +27,7 @@
         function prime(x) {
             var prime = 0;
             var primeCount = 0;
-            for (var i = 0; primeCount < x+1; i++) {
+            for (var i = 2; primeCount < x; i++) {
                 if (isPrime(i) === true) {
                     prime = i;
                     primeCount++;
@@ -40,7 +35,8 @@
             }
             return prime;
         }
-
+        console.log(prime(17));
+        console.log(isPrime(104729));
         console.log(prime(10001));
     </script>
 </body>
