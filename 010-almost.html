@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Summation Of Primes</title>
+</head>
+<body>
+    <script>
+        // Problem 10: Summation of primes
+
+        // The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+        // Find the sum of all the primes below two million.
+
+        var sum = 0;
+        var prime = 0;
+        function isPrime(x) {
+            for (var i = 2; i < x; i++) {
+                if (x % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function primeSum(x) {
+            for (var i = 2; i < x; i++) {
+                if (isPrime(i)) {
+                    sum = sum + i;
+                }
+            }
+            return sum;
+        }
+        console.log(primeSum(10));
+        console.log(primeSum(2000000));
+    </script>
+</body>
+</html>
